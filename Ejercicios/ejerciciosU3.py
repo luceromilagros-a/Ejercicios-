@@ -214,6 +214,18 @@ elif intento < numero_secreto :
 else :
     print ("Incorrecto. El número secreto es menor.")
 
+
+secreto = 6 
+intento = 0
+while intento != secreto:
+    intento = int(input("Adiviná el número secreto entre 1 y 10: "))
+    if intento == secreto:  
+        print("¡Felicidades! ADIVINASTE EL NÚMERO.")
+    elif intento < secreto:
+        print("INCORRECTO. El número secreto es mayor")
+    else:
+        print("INCORRECTO. El número secreto es menor")
+
 # 15.Identificación del tipo de dato
 
 
@@ -244,20 +256,15 @@ else :
 # Entrada: "-2.5" → "El dato representa un número flotante"
 # Entrada: "hola" → "El dato representa una cadena de texto"
 
-entrada = input ("Ingresá un dato: ")
-if entrada.isdigit () or (entrada.startswith("-") and entrada[1:].isdigit()) :
-    if entrada.startswith ("-") :
-        print ("El dato representa un número negativo")
-    else :
-        print ("El dato representa un número entero entero")
-elif entrada.count (".") == 1 :
-    test_flotante = entrada.replace(".", "").replace("-", "")
-    if test_flotante.isdigit () :
-        print ("El dato representa un número flotante")
-    else :
-        print ("El dato representa una cadena de texto")
-else :
-    print ("El dato representa una cadena de texto")
+dato = input("Ingresá un dato: ")
+if "." in dato and dato.replace(".", "", 1).replace("-", "", 1).isdigit():
+    print("El dato representa un número flotante")
+elif dato.startswith("-") and dato[1:].isdigit():
+    print("El dato representa un número entero negativo")
+elif dato.isdigit():
+    print("El dato dato representa un número entero")
+else:
+    print("El número representa una cadena de texto")
 
 # 16.Calculador de calificaciones
 # Crea un programa que pida al usuario que ingrese sus calificaciones en tres materias. 
