@@ -70,3 +70,16 @@ print (f"El resultado de la división es: {division}")
 cadena = input ("Ingresá un número entero: ")
 numero = int (cadena) + 10
 print (f"El resultado de la suma es de: {numero}")
+
+# 5. Pregunta al usuario que ingrese un número. 
+# Si el número es mayor que 10, imprime "El número es mayor que 10". 
+# Si es igual a 10, imprime "El número es igual a 10". 
+# De lo contrario, imprime "El número es menor que 10".
+
+numero = int (input ("Ingresá un número: "))
+if numero > 10:
+    print ("El número es mayor a 10")
+elif numero == 10:
+    print ("El número es igual a 10")
+else :
+    print ("El número es menor que 10")
