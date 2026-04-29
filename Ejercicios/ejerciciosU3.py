@@ -83,3 +83,16 @@ elif numero == 10:
     print ("El número es igual a 10")
 else :
     print ("El número es menor que 10")
+    
+# 6. Solicita al usuario que ingrese dos números y compara si son iguales. 
+# Si lo son, imprime "Los números son iguales". 
+# De lo contrario, imprime "Los números son diferentes".
+
+n1 = input ("Ingresá un número: ")
+n2 = input ("Ingresá el segundo número: ")
+if n1 == n2:
+    print ("Los números son iguales")
+else :
+    print ("Los número son diferentes")
+
+           
