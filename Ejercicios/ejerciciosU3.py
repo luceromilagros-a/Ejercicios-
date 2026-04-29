@@ -137,7 +137,6 @@ else :
 # Si ingresa un número fuera de ese rango, imprime "Número de día no válido".
 
 num = int (input ("Ingresá un número del 1 al 7: "))
-print (f"")
 if num == 1 :
     print ("LUNES")
 elif num == 2 :
@@ -154,3 +153,26 @@ elif num == 7 :
     print ("DOMINGO")
 else :
     print ("Número de día no válido")
+
+# 11.Calculadora básica
+# Crea un programa que tome dos números como entrada y 
+# luego imprima la suma, resta, multiplicación y división de esos dos números. 
+# Usa operadores aritméticos y asegúrate de manejar casos donde el divisor sea cero.
+
+num1 = int (input ("Ingresá un número entero: "))
+num2 = int (input ("Ingresá el segundo número entero: "))
+print (f"Suma: {num1 + num2}")
+print (f"Resta: {num1 - num2}")
+print (f"Multiplicación: {num1 * num2}")
+if num2 != 0 :
+    print (f"División: {num1 / num2}")
+else :
+    print ("División: No es posible dividor por cero.")
+
+# 12.Calculador de IMC
+# Crea un programa que calcule el Índice de Masa Corporal (IMC) de una persona. 
+# Pide al usuario su peso en kilogramos y su altura en metros. 
+# Luego, calcula el IMC usando la fórmula `IMC = peso / altura**2` y 
+# muestra el resultado con un mensaje que indique si el IMC está en el rango normal,
+#  bajo peso, sobrepeso, etc.
+
