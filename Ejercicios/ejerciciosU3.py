@@ -244,17 +244,31 @@
 # Entrada: "-2.5" → "El dato representa un número flotante"
 # Entrada: "hola" → "El dato representa una cadena de texto"
 
-entrada = input ("Ingresá un dato: ")
-if entrada.isdigit () or (entrada.startswith("-") and entrada[1:].isdigit()) :
-    if entrada.startswith ("-") :
-        print ("El dato representa un número negativo")
-    else :
-        print ("El dato representa un número entero entero")
-elif entrada.count (".") == 1 :
-    test_flotante = entrada.replace(".", "").replace("-", "")
-    if test_flotante.isdigit () :
-        print ("El dato representa un número flotante")
-    else :
-        print ("El dato representa una cadena de texto")
+# entrada = input ("Ingresá un dato: ")
+# if entrada.isdigit () or (entrada.startswith("-") and entrada[1:].isdigit()) :
+#     if entrada.startswith ("-") :
+#         print ("El dato representa un número negativo")
+#     else :
+#         print ("El dato representa un número entero entero")
+# elif entrada.count (".") == 1 :
+#     test_flotante = entrada.replace(".", "").replace("-", "")
+#     if test_flotante.isdigit () :
+#         print ("El dato representa un número flotante")
+#     else :
+#         print ("El dato representa una cadena de texto")
+# else :
+#     print ("El dato representa una cadena de texto")
+
+# 16.Calculador de calificaciones
+# Crea un programa que pida al usuario que ingrese sus calificaciones en tres materias. 
+# Luego, calcula el promedio de esas calificaciones e imprime un mensaje que indique si 
+# el alumno aprobó (promedio ≥ 6) o no.
+
+nota1 = float (input ("Ingresá tu nota de la primera materia: "))
+nota2 = float (input ("Ingresá tu nota de tu segunda materia: "))
+nota3 = float (input ("Ingresá tu nota de tu tercera materia: "))
+promedio = (nota1 + nota2 + nota3) / 3
+if promedio >= 6 :
+    print ("APROBASTE")
 else :
-    print ("El dato representa una cadena de texto")
+    print ("Desaprobado")
