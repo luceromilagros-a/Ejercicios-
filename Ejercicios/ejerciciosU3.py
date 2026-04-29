@@ -104,3 +104,17 @@ if edad >= 18 :
     print ("Eres mayor de edad")
 else :
     print ("Eres menor de edad") 
+
+# 8. Pide al usuario que ingrese una temperatura en Celsius. 
+# Si la temperatura es mayor o igual a 100, imprime "El agua está hirviendo". 
+# Si es menor o igual a 0, imprime "El agua está congelada". 
+# De lo contrario, imprime "El agua está en estado líquido".
+
+temperaturaC = float (input ("Ingresá la temperatura en Celsius: "))
+if temperaturaC >= 100 :
+    print ("El agua está hirviendo")
+elif temperaturaC <= 0 :
+    print ("El agua está congelada")
+else :
+    print ("El agua está en estado líquido")
+
