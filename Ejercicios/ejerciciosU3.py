@@ -264,11 +264,20 @@
 # Luego, calcula el promedio de esas calificaciones e imprime un mensaje que indique si 
 # el alumno aprobó (promedio ≥ 6) o no.
 
-nota1 = float (input ("Ingresá tu nota de la primera materia: "))
-nota2 = float (input ("Ingresá tu nota de tu segunda materia: "))
-nota3 = float (input ("Ingresá tu nota de tu tercera materia: "))
-promedio = (nota1 + nota2 + nota3) / 3
-if promedio >= 6 :
-    print ("APROBASTE")
-else :
-    print ("Desaprobado")
+# nota1 = float (input ("Ingresá tu nota de la primera materia: "))
+# nota2 = float (input ("Ingresá tu nota de tu segunda materia: "))
+# nota3 = float (input ("Ingresá tu nota de tu tercera materia: "))
+# promedio = (nota1 + nota2 + nota3) / 3
+# if promedio >= 6 :
+#     print ("APROBASTE")
+# else :
+#     print ("Desaprobado")
+
+# 17.Concatenación de strings
+# Escribe un programa que pida al usuario su nombre y su color favorito. 
+# Luego, concatena estos datos en una sola oración que diga
+#  "Hola [nombre], tu color favorito es [color]" y la imprima.
+
+nombre = input ("Ingresá tu nombre: ")
+color = input ("Insgresá tu color favorito: ")
+print (f"Hola {nombre}!, tu color favorito es {color}")
