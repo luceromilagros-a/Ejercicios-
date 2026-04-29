@@ -118,3 +118,16 @@ elif temperaturaC <= 0 :
 else :
     print ("El agua está en estado líquido")
 
+# 9. Pregunta al usuario que ingrese un número. 
+# Si es positivo, imprime "El número es positivo". 
+# Si es negativo, imprime "El número es negativo". 
+# Si es cero, imprime "El número es cero".
+
+n = int (input ("Ingresá un número:"))
+
+if n > 0 :
+    print ("El número es positivo")
+elif n < 0 :
+    print ("El número es negativo")
+else :
+    print ("El número es 0")
