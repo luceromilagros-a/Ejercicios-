@@ -95,4 +95,4 @@ if n1 == n2:
 else :
     print ("Los número son diferentes")
 
-           
+          
