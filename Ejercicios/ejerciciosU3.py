@@ -205,3 +205,11 @@
 # decir si es correcto o no. 
 # Si es incorrecto, debe dar una pista si el número es mayor o menor.
 
+numero_secreto = 5
+intento = int (input ("Adivina el número entero entre el 1 y el 10: "))
+if intento == numero_secreto :
+    print ("GANASTE!!!!!")
+elif intento < numero_secreto :
+    print ("Incorrecto. El número secreto es mayor.")
+else :
+    print ("Incorrecto. El número secreto es menor.")
