@@ -131,3 +131,26 @@ elif n < 0 :
     print ("El número es negativo")
 else :
     print ("El número es 0")
+
+# 10. Solicita al usuario que ingrese un número del 1 al 7. 
+# Luego, imprime el día de la semana correspondiente (1 para Lunes, 2 para Martes, etc.). 
+# Si ingresa un número fuera de ese rango, imprime "Número de día no válido".
+
+num = int (input ("Ingresá un número del 1 al 7: "))
+print (f"")
+if num == 1 :
+    print ("LUNES")
+elif num == 2 :
+    print ("MARTES")
+elif num == 3 : 
+    print ("MIÉRCOLES")
+elif num == 4 :
+    print ("JUEVES")
+elif num == 5 :
+    print ("VIERNES")
+elif num == 6 :
+    print ("SÁBADO")
+elif num == 7 :
+    print ("DOMINGO")
+else :
+    print ("Número de día no válido")
