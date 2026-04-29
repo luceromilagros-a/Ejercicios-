@@ -205,11 +205,56 @@
 # decir si es correcto o no. 
 # Si es incorrecto, debe dar una pista si el número es mayor o menor.
 
-numero_secreto = 5
-intento = int (input ("Adivina el número entero entre el 1 y el 10: "))
-if intento == numero_secreto :
-    print ("GANASTE!!!!!")
-elif intento < numero_secreto :
-    print ("Incorrecto. El número secreto es mayor.")
+# numero_secreto = 5
+# intento = int (input ("Adivina el número entero entre el 1 y el 10: "))
+# if intento == numero_secreto :
+#     print ("GANASTE!!!!!")
+# elif intento < numero_secreto :
+#     print ("Incorrecto. El número secreto es mayor.")
+# else :
+#     print ("Incorrecto. El número secreto es menor.")
+
+# 15.Identificación del tipo de dato
+
+
+# Escribe un programa que tome una entrada del usuario usando input() y 
+# determine qué tipo de dato representa la cadena ingresada. 
+# Ten en cuenta que input() siempre devuelve una cadena de texto (string), 
+# pero el usuario puede haber ingresado algo que representa un número.
+
+# Tu programa debe analizar la entrada y determinar si representa:
+
+#     Un número entero (positivo o negativo)
+#     Un número flotante (positivo o negativo)
+#     Una cadena de texto
+
+# Requisitos específicos:
+
+#     Usa el método isdigit() para verificar si todos los caracteres son dígitos
+#     Para números negativos, verifica si el primer carácter es un guión (-) usando indexación
+#     Para números flotantes, verifica si contiene exactamente un punto decimal
+#     Imprime un mensaje claro indicando qué tipo de dato representa la entrada
+
+
+# Ejemplo de salidas esperadas:
+
+# Entrada: "123" → "El dato representa un número entero"
+# Entrada: "-45" → "El dato representa un número entero negativo"
+# Entrada: "3.14" → "El dato representa un número flotante"
+# Entrada: "-2.5" → "El dato representa un número flotante"
+# Entrada: "hola" → "El dato representa una cadena de texto"
+
+entrada = input ("Ingresá un dato: ")
+if entrada.isdigit () or (entrada.startswith("-") and entrada[1:].isdigit()) :
+    if entrada.startswith ("-") :
+        print ("El dato representa un número negativo")
+    else :
+        print ("El dato representa un número entero entero")
+elif entrada.count (".") == 1 :
+    test_flotante = entrada.replace(".", "").replace("-", "")
+    if test_flotante.isdigit () :
+        print ("El dato representa un número flotante")
+    else :
+        print ("El dato representa una cadena de texto")
 else :
-    print ("Incorrecto. El número secreto es menor.")
+    print ("El dato representa una cadena de texto")
