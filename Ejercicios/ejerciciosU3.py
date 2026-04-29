@@ -176,16 +176,32 @@
 # # muestra el resultado con un mensaje que indique si el IMC está en el rango normal,
 # #  bajo peso, sobrepeso, etc.
 
-peso = float (input ("Ingresá tu peso en kg: "))
-altura = float (input ("Ingresá tu altura en metros: "))
-imc = peso / (altura ** 2)
-print (f"Tu IMC es: {round (imc, 2)}")
+# peso = float (input ("Ingresá tu peso en kg: "))
+# altura = float (input ("Ingresá tu altura en metros: "))
+# imc = peso / (altura ** 2)
+# print (f"Tu IMC es: {round (imc, 2)}")
 
-if imc < 18.5 :
-    print ("Calificación: Bajo peso")
-elif 18.5 <= imc < 25 :
-    print ("Calificación: Peso normal (saludable)")
-elif 25 <= imc < 30 :
-    print ("Calificación: Sobrepeso")
-else :
-    print ("Calificación: Obesidad")
+# if imc < 18.5 :
+#     print ("Calificación: Bajo peso")
+# elif 18.5 <= imc < 25 :
+#     print ("Calificación: Peso normal (saludable)")
+# elif 25 <= imc < 30 :
+#     print ("Calificación: Sobrepeso")
+# else :
+#     print ("Calificación: Obesidad")
+
+# 13.Conversión de unidades
+# Escribe un programa que convierta una temperatura dada en grados Celsius a grados Fahrenheit. 
+# La fórmula de conversión es `F = C * 9/5 + 32`.
+# Pide al usuario que ingrese una temperatura en Celsius y muestra el resultado en Fahrenheit.
+
+# temperaturaC = float (input ("Ingresá la tempratura en Celsius: "))
+# Fahrenheit = (temperaturaC * 1.8) + 32
+# print (f"La temperatura en Fahrenjeit es: {Fahrenheit}")
+
+# 14.Juego de adivinanza
+# Crea un programa que pida al usuario que adivine un número entre 1 y 10. 
+# El programa debe comparar el número ingresado con uno predefinido (por ejemplo, 7) y 
+# decir si es correcto o no. 
+# Si es incorrecto, debe dar una pista si el número es mayor o menor.
+
