@@ -13,33 +13,33 @@ definido mostrar el texto VALOR ALTO
 Si el numero que puso el usuario esta entre el valor minimo y 
 el valor maximo mostrar el texto VALOR MEDIO
 """
-valor_min = 20
-valor_max = 500 
+# valor_min = 20
+# valor_max = 500 
 
-while True :
-    entrada = input ("Ingresá un valor entero: ")
-    if entrada.isdigit () :
-        valor_usuario = int (entrada)
-        break
-    else :
-        print ("Entrada no válida. Por favor, ingresá solo números")
-if valor_usuario < valor_min :
-    print ("VALOR BAJO")
-elif valor_usuario < valor_min : 
-    print ("VALOR ALTO")
-else :
-    print ("VALOR MEDIO")
+# while True :
+#     entrada = input ("Ingresá un valor entero: ")
+#     if entrada.isdigit () :
+#         valor_usuario = int (entrada)
+#         break
+#     else :
+#         print ("Entrada no válida. Por favor, ingresá solo números")
+# if valor_usuario < valor_min :
+#     print ("VALOR BAJO")
+# elif valor_usuario < valor_min : 
+#     print ("VALOR ALTO")
+# else :
+#     print ("VALOR MEDIO")
 
 """
 2)Escriba un programa que pida un año y que escriba si es bisiesto o no.
 Se recuerda que los años bisiestos son múltiplos de 4, pero los múltiplos de 100 no lo son, 
 aunque los múltiplos de 400 sí.
 """
-anio = int (input ("Ingresa año: "))
-if (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0) :
-    print ("El año es bisiesto!")
-else :
-    print ("El año no es bisiesto.")
+# anio = int (input ("Ingresa año: "))
+# if (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0) :
+#     print ("El año es bisiesto!")
+# else :
+#     print ("El año no es bisiesto.")
 
 """
 3)Pedir al usuario que ingrese un número de inicio del bucle
@@ -56,17 +56,17 @@ Este es el bucle número 3
 Fin del programa.
 
 """
-inicio = int (input ("Ingresa el número del principio de un Bucle: "))
-final = int (input ("Ingresá el número final del Bucle: "))
-while inicio >= final :
-    print ("El número inicial debe ser menor al número final. Por favor, ingresá otro número")
-    inicio = int (input ("Ingresa el número del principio de un Bucle: "))
-    final = int (input ("Ingresá el número final del Bucle: "))
+# inicio = int (input ("Ingresa el número del principio de un Bucle: "))
+# final = int (input ("Ingresá el número final del Bucle: "))
+# while inicio >= final :
+#     print ("El número inicial debe ser menor al número final. Por favor, ingresá otro número")
+#     inicio = int (input ("Ingresa el número del principio de un Bucle: "))
+#     final = int (input ("Ingresá el número final del Bucle: "))
 
-while inicio < final :
-    print (f"Este es el Bucle número {inicio}")
-    inicio += 1 
-print ("FIN DEL PROGRAMA")
+# while inicio < final :
+#     print (f"Este es el Bucle número {inicio}")
+#     inicio += 1 
+# print ("FIN DEL PROGRAMA")
 
 """
 5)Vamos a realizar un programa que nos va a decir la nota promedio 
@@ -91,19 +91,53 @@ En caso de que sea menor a 6, debe avisar que el alumno no aprobó el final de
 la materia, y puede rendir recuperatorio.
 
 """
-exa1 = float (input ("Ingresá la nota de tu primer exámen: "))
-exa2 = float (input ("Ingresá la nota de tu segundo exámen:"))
-exa3 = float (input ("Ingresá la nota de tu tercer exámen: "))
-exa4 = float (input ("Ingresá la nota de tu cuarto exámen: "))
-promedio = (exa1 + exa2 + exa3 + exa4) / 4
-if promedio >= 6 :
-    print ("Aprobaste la cursada!!!. Podes rendir tu exámen final.")
-    final = float (input ("Ingresá tu nota del final: "))
-    if final >= 6 :
-        print ("APROBASTE LA MATERIA!!!!")
-    else :
-        print ("No aprobaste el final, PERO podes rendir el recuperatorio.")
+# exa1 = float (input ("Ingresá la nota de tu primer exámen: "))
+# exa2 = float (input ("Ingresá la nota de tu segundo exámen:"))
+# exa3 = float (input ("Ingresá la nota de tu tercer exámen: "))
+# exa4 = float (input ("Ingresá la nota de tu cuarto exámen: "))
+# promedio = (exa1 + exa2 + exa3 + exa4) / 4
+# if promedio >= 6 :
+#     print ("Aprobaste la cursada!!!. Podes rendir tu exámen final.")
+#     final = float (input ("Ingresá tu nota del final: "))
+#     if final >= 6 :
+#         print ("APROBASTE LA MATERIA!!!!")
+#     else :
+#         print ("No aprobaste el final, PERO podes rendir el recuperatorio.")
 
+# else :
+#     print ("Lo siento, no aprobaste la cursada.")
+
+"""
+5)Escriba un programa que pida los coeficientes de una ecuación de 
+primer grado (a x + b = 0) y escriba la solución.
+Se recuerda que una ecuación de primer grado puede no tener solución, 
+tener una solución única, o que todos los números sean solución. Se 
+recuerda que la fórmula de las soluciones es x = -b / a
+Estos son algunos ejemplos de posibles respuestas (el orden de los 
+ejemplos no tiene por qué corresponder con el orden de las condiciones):
+
+ECUACIÓN A X + B = 0
+Escriba el valor del coeficiente a: 0
+Escriba el valor del coeficiente b: 3
+La ecuación no tiene solución.
+
+ECUACIÓN A X + B = 0
+Escriba el valor del coeficiente a: 4.2
+Escriba el valor del coeficiente b: 21
+La ecuación tiene una solución: -5.0
+
+ECUACIÓN A X + B = 0
+Escriba el valor del coeficiente a: 0
+Escriba el valor del coeficiente b: 0
+Todos los números son solución.
+"""
+print ("ECUACIÓN a x + c = 0")
+a = float (input (" Ingresá el valot del coeficiente a: "))
+b = float (input ("Ingresá el valor del coeficiente b: "))
+if a == 0 and b == 0 :
+    print ("Todos los números son solución")
+elif a == 0 :
+    print ("La ecuación no tiene solución")
 else :
-    print ("Lo siento, no aprobaste la cursada.")
-
+    x = -b / a
+    print (f"La eciación tiene solución: {x}")
