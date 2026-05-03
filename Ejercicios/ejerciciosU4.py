@@ -13,33 +13,33 @@ definido mostrar el texto VALOR ALTO
 Si el numero que puso el usuario esta entre el valor minimo y 
 el valor maximo mostrar el texto VALOR MEDIO
 """
-# valor_min = 20
-# valor_max = 500 
+valor_min = 20
+valor_max = 500 
 
-# while True :
-#     entrada = input ("Ingresá un valor entero: ")
-#     if entrada.isdigit () :
-#         valor_usuario = int (entrada)
-#         break
-#     else :
-#         print ("Entrada no válida. Por favor, ingresá solo números")
-# if valor_usuario < valor_min :
-#     print ("VALOR BAJO")
-# elif valor_usuario < valor_min : 
-#     print ("VALOR ALTO")
-# else :
-#     print ("VALOR MEDIO")
+while True :
+    entrada = input ("Ingresá un valor entero: ")
+    if entrada.isdigit () :
+        valor_usuario = int (entrada)
+        break
+    else :
+        print ("Entrada no válida. Por favor, ingresá solo números")
+if valor_usuario < valor_min :
+    print ("VALOR BAJO")
+elif valor_usuario < valor_min : 
+    print ("VALOR ALTO")
+else :
+    print ("VALOR MEDIO")
 
 """
 2)Escriba un programa que pida un año y que escriba si es bisiesto o no.
 Se recuerda que los años bisiestos son múltiplos de 4, pero los múltiplos de 100 no lo son, 
 aunque los múltiplos de 400 sí.
 """
-# anio = int (input ("Ingresa año: "))
-# if (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0) :
-#     print ("El año es bisiesto!")
-# else :
-#     print ("El año no es bisiesto.")
+anio = int (input ("Ingresa año: "))
+if (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0) :
+    print ("El año es bisiesto!")
+else :
+    print ("El año no es bisiesto.")
 
 """
 3)Pedir al usuario que ingrese un número de inicio del bucle
@@ -56,17 +56,17 @@ Este es el bucle número 3
 Fin del programa.
 
 """
-# inicio = int (input ("Ingresa el número del principio de un Bucle: "))
-# final = int (input ("Ingresá el número final del Bucle: "))
-# while inicio >= final :
-#     print ("El número inicial debe ser menor al número final. Por favor, ingresá otro número")
-#     inicio = int (input ("Ingresa el número del principio de un Bucle: "))
-#     final = int (input ("Ingresá el número final del Bucle: "))
+inicio = int (input ("Ingresa el número del principio de un Bucle: "))
+final = int (input ("Ingresá el número final del Bucle: "))
+while inicio >= final :
+    print ("El número inicial debe ser menor al número final. Por favor, ingresá otro número")
+    inicio = int (input ("Ingresa el número del principio de un Bucle: "))
+    final = int (input ("Ingresá el número final del Bucle: "))
 
-# while inicio < final :
-#     print (f"Este es el Bucle número {inicio}")
-#     inicio += 1 
-# print ("FIN DEL PROGRAMA")
+while inicio < final :
+    print (f"Este es el Bucle número {inicio}")
+    inicio += 1 
+print ("FIN DEL PROGRAMA")
 
 """
 5)Vamos a realizar un programa que nos va a decir la nota promedio 
@@ -91,21 +91,21 @@ En caso de que sea menor a 6, debe avisar que el alumno no aprobó el final de
 la materia, y puede rendir recuperatorio.
 
 """
-# exa1 = float (input ("Ingresá la nota de tu primer exámen: "))
-# exa2 = float (input ("Ingresá la nota de tu segundo exámen:"))
-# exa3 = float (input ("Ingresá la nota de tu tercer exámen: "))
-# exa4 = float (input ("Ingresá la nota de tu cuarto exámen: "))
-# promedio = (exa1 + exa2 + exa3 + exa4) / 4
-# if promedio >= 6 :
-#     print ("Aprobaste la cursada!!!. Podes rendir tu exámen final.")
-#     final = float (input ("Ingresá tu nota del final: "))
-#     if final >= 6 :
-#         print ("APROBASTE LA MATERIA!!!!")
-#     else :
-#         print ("No aprobaste el final, PERO podes rendir el recuperatorio.")
+exa1 = float (input ("Ingresá la nota de tu primer exámen: "))
+exa2 = float (input ("Ingresá la nota de tu segundo exámen:"))
+exa3 = float (input ("Ingresá la nota de tu tercer exámen: "))
+exa4 = float (input ("Ingresá la nota de tu cuarto exámen: "))
+promedio = (exa1 + exa2 + exa3 + exa4) / 4
+if promedio >= 6 :
+    print ("Aprobaste la cursada!!!. Podes rendir tu exámen final.")
+    final = float (input ("Ingresá tu nota del final: "))
+    if final >= 6 :
+        print ("APROBASTE LA MATERIA!!!!")
+    else :
+        print ("No aprobaste el final, PERO podes rendir el recuperatorio.")
 
-# else :
-#     print ("Lo siento, no aprobaste la cursada.")
+else :
+    print ("Lo siento, no aprobaste la cursada.")
 
 """
 5)Escriba un programa que pida los coeficientes de una ecuación de 
@@ -131,16 +131,16 @@ Escriba el valor del coeficiente a: 0
 Escriba el valor del coeficiente b: 0
 Todos los números son solución.
 """
-# print ("ECUACIÓN a x + c = 0")
-# a = float (input (" Ingresá el valor del coeficiente a: "))
-# b = float (input ("Ingresá el valor del coeficiente b: "))
-# if a == 0 and b == 0 :
-#     print ("Todos los números son solución")
-# elif a == 0 :
-#     print ("La ecuación no tiene solución")
-# else :
-#     x = -b / a
-#     print (f"La eciación tiene solución: {x}")
+print ("ECUACIÓN a x + c = 0")
+a = float (input (" Ingresá el valor del coeficiente a: "))
+b = float (input ("Ingresá el valor del coeficiente b: "))
+if a == 0 and b == 0 :
+    print ("Todos los números son solución")
+elif a == 0 :
+    print ("La ecuación no tiene solución")
+else :
+    x = -b / a
+    print (f"La eciación tiene solución: {x}")
 
 """
 6)Escriba un programa que pida los coeficientes de una 
@@ -189,4 +189,59 @@ else :
         x1 = (-b + math.sqrt(d)) / (2 * a)
         x2 = (-b - math.sqrt(d)) / (2 * a)
         print (f"Dos soluciones: {x1} y {x2}")
-        
+
+"""
+7)Escriba un programa que pregunte primero 
+si se quiere calcular el área de un triángulo 
+o la de un círculo. Si se contesta que se quiere 
+calcular el área de un triángulo (escribiendo T o t), 
+el programa tiene que pedir entonces la base y la altura 
+y escribir el área. Si se contesta que se quiere calcular 
+el área de un círculo (escribiendo C o c), el programa 
+tiene que pedir entonces el radio y escribir el área.
+
+Se recuerda que el área de un triángulo es base por altura 
+dividido por 2 y que el área de un círculo es Pi 
+(aproximadamente 3,141592) por el radio al cuadrado.
+
+Nota: Utilice como valor de pi el valor 3.141592.
+
+"""
+PI = 3.14
+print ("CÁLCULO DE ÁREAS")
+respuesta = input ("¿Querés calcular el área " \
+"de un Triángulo(T) o de un Circulo(C)?" \
+"Ingresá la letra de opción elegida: ").upper()
+if respuesta == "T" :
+    base = float (input ("Ingresá la base: "))
+    altura = float ("Ingresá la altura: ")
+    area = (base * altura) / 2
+    print (f"El área del triángulo es: {area}")
+elif respuesta == "C" :
+    radio = float (input ("Ingresa el radio: "))
+    area = PI * (radio ** 2)
+    print (f"El área del circulo es {area}")
+else :
+    print ("Opción no válida. Por favor, ingresá T o C.")
+
+"""
+8)Escriba un programa que pida tres números y diga si 
+el tercero está más cerca del primero o del segundo.
+"""
+dat1 = int (input ("Ingresá el primer número entero: "))
+dat2 = int (input ("Ingresá el segundo número entero: "))
+dat3 = int (input ("Ingresá el tercer número entero: "))
+if dat1 > dat3 :
+    distancia1 = dat1 - dat3
+else :
+    distancia1 = dat3 - dat1
+if dat2 > dat3 :
+    distancia2 = dat2 - dat3
+else :
+    distancia2 = dat3 - dat2
+if distancia1 < distancia2 :
+    print (f"Está más cerca del primero {dat1}")
+elif distancia2 < distancia1 :
+    print (f"Está más cerca del segundo {dat2}")
+else :
+    print ("Está a la misma distancia de ambos")
