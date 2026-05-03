@@ -131,13 +131,62 @@ Escriba el valor del coeficiente a: 0
 Escriba el valor del coeficiente b: 0
 Todos los números son solución.
 """
-print ("ECUACIÓN a x + c = 0")
-a = float (input (" Ingresá el valot del coeficiente a: "))
+# print ("ECUACIÓN a x + c = 0")
+# a = float (input (" Ingresá el valor del coeficiente a: "))
+# b = float (input ("Ingresá el valor del coeficiente b: "))
+# if a == 0 and b == 0 :
+#     print ("Todos los números son solución")
+# elif a == 0 :
+#     print ("La ecuación no tiene solución")
+# else :
+#     x = -b / a
+#     print (f"La eciación tiene solución: {x}")
+
+"""
+6)Escriba un programa que pida los coeficientes de una 
+ecuación de segundo grado (a x² + b x + c = 0) y 
+escriba la solución.
+
+Se recuerda que una ecuación de segundo grado puede 
+no tener solución, tener una solución única, tener dos 
+soluciones o que todos los números sean solución. Se 
+recuerda que la fórmula de las soluciones cuando hay dos 
+soluciones es x = (-b ± √(b2-4ac) ) / (2a)
+
+Estos son algunos ejemplos de posibles respuestas (el 
+orden de los ejemplos no tiene por qué corresponder con el 
+orden de las condiciones).
+
+a	b	c	Solución
+1	-2	2	Sin solución real
+2	-7	3	Dos soluciones: 0.5 y 3.0
+1	2	1	Una solución: -1.0
+0	0	5	Sin solución
+0	0	0	Todos los números son solución
+0	3	2	Una solución: -0.666...
+"""
+import math
+
+print ("ECUACIÓN a x² + b x + c = 0")
+a = float (input ("Ingresá el valor del coeficiente a: "))
 b = float (input ("Ingresá el valor del coeficiente b: "))
-if a == 0 and b == 0 :
+c = float (input ("Ingresá el valor del coeficiente c: "))
+if a == 0 and b == 0 and c == 0 :
     print ("Todos los números son solución")
+elif a == 0 and b == 0 :
+    print ("Sin solución")
 elif a == 0 :
-    print ("La ecuación no tiene solución")
+    x = -c / b 
+    print (f"Tiene una solución: {x}")
 else :
-    x = -b / a
-    print (f"La eciación tiene solución: {x}")
+    d = b**2 - 4*a*c
+    if d < 0:
+        print ("Sin solución real.")
+    elif d == 0:
+        x = -b / (2 * a)
+        print (f"Una solución: {x}")
+    else :
+        x1 = (-b + math.sqrt(d)) / (2 * a)
+        x2 = (-b - math.sqrt(d)) / (2 * a)
+        print (f"Dos soluciones: {x1} y {x2}")
+        
