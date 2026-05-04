@@ -14,7 +14,7 @@ Si el numero que puso el usuario esta entre el valor minimo y
 el valor maximo mostrar el texto VALOR MEDIO
 """
 valor_min = 20
-valor_max = 500 
+valor_max = 500
 
 while True :
     entrada = input ("Ingresá un valor entero: ")
@@ -23,10 +23,17 @@ while True :
         break
     else :
         print ("Entrada no válida. Por favor, ingresá solo números")
+# ✅ Bien hecho: el while True con isdigit() es una buena forma de forzar entrada numérica.
+# 💡 Sugerencia: isdigit() NO acepta números negativos (el "-" no es dígito). Para este ejercicio quizás está bien,
+#                pero tenelo presente para casos donde quieras permitir negativos.
+
 if valor_usuario < valor_min :
     print ("VALOR BAJO")
-elif valor_usuario < valor_min : 
+elif valor_usuario < valor_min :
     print ("VALOR ALTO")
+# ❌ Error LÓGICO: la condición del elif es la MISMA que la del if (`< valor_min`). ¡Nunca se va a cumplir!
+#                 Debería ser:  elif valor_usuario > valor_max :
+# 💡 Sugerencia: revisar atentamente las condiciones cuando copiás líneas similares. Errores así de "copy-paste" son comunes.
 else :
     print ("VALOR MEDIO")
 
@@ -40,6 +47,8 @@ if (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0) :
     print ("El año es bisiesto!")
 else :
     print ("El año no es bisiesto.")
+# ✅ Bien hecho: la regla de los bisiestos es notoriamente difícil y la condición compuesta está perfecta.
+#                Múltiplos de 4, salvo múltiplos de 100, salvo múltiplos de 400 → todo cubierto.
 
 """
 3)Pedir al usuario que ingrese un número de inicio del bucle
@@ -62,11 +71,22 @@ while inicio >= final :
     print ("El número inicial debe ser menor al número final. Por favor, ingresá otro número")
     inicio = int (input ("Ingresa el número del principio de un Bucle: "))
     final = int (input ("Ingresá el número final del Bucle: "))
+# ✅ Bien hecho: validación con while hasta que inicio < final. ¡Excelente!
 
 while inicio < final :
     print (f"Este es el Bucle número {inicio}")
-    inicio += 1 
+    inicio += 1
 print ("FIN DEL PROGRAMA")
+# 💡 Sugerencia: leyendo el ejemplo del enunciado ("bucle número 1, 2, 3..."), pareciera que se espera
+#                un contador empezando en 1, no en `inicio`. Si el usuario entra inicio=5 y final=8,
+#                tu código imprime "Bucle número 5, 6, 7" en lugar de "1, 2, 3".
+#                Si lo querés desde 1, podés llevar un contador aparte:
+#                    contador = 1
+#                    while inicio < final:
+#                        print(f"Este es el bucle número {contador}")
+#                        inicio += 1
+#                        contador += 1
+# 💡 Sugerencia: para iterar entre dos números, en general se prefiere `for i in range(inicio, final)`.
 
 """
 5)Vamos a realizar un programa que nos va a decir la nota promedio 
@@ -106,6 +126,9 @@ if promedio >= 6 :
 
 else :
     print ("Lo siento, no aprobaste la cursada.")
+# ✅ Bien hecho: muy bien resuelta la lógica anidada (cursada → final → resultado).
+# 💡 Sugerencia: la consigna pide AVISAR el promedio antes del veredicto. Te conviene agregar:
+#                print(f"Tu promedio es: {promedio}")
 
 """
 5)Escriba un programa que pida los coeficientes de una ecuación de 
@@ -141,6 +164,9 @@ elif a == 0 :
 else :
     x = -b / a
     print (f"La eciación tiene solución: {x}")
+# ✅ Bien hecho: los tres casos (a≠0 / a=0,b≠0 / a=0,b=0) están cubiertos en el orden correcto.
+# 💡 Sugerencia: typo → "eciación" debería ser "ecuación". Y ojo: el título dice "a x + c = 0" pero los coeficientes
+#                que pedís son a y b (mejor unificar).
 
 """
 6)Escriba un programa que pida los coeficientes de una 
@@ -189,6 +215,8 @@ else :
         x1 = (-b + math.sqrt(d)) / (2 * a)
         x2 = (-b - math.sqrt(d)) / (2 * a)
         print (f"Dos soluciones: {x1} y {x2}")
+# ✅ Bien hecho: ¡un ejercicio que cubre TODOS los casos especiales! a=0/b=0/c=0, a=0/b=0, a=0, discriminante <,=,>.
+#                Excelente uso de math.sqrt y muy buena estructura de if anidados. 💪
 
 """
 7)Escriba un programa que pregunte primero 
@@ -208,13 +236,19 @@ Nota: Utilice como valor de pi el valor 3.141592.
 
 """
 PI = 3.14
+# 💡 Sugerencia: el enunciado pide usar PI = 3.141592 (más preciso). Acá lo dejaste en 3.14.
+
 print ("CÁLCULO DE ÁREAS")
 respuesta = input ("¿Querés calcular el área " \
 "de un Triángulo(T) o de un Circulo(C)?" \
 "Ingresá la letra de opción elegida: ").upper()
+# ✅ Bien hecho: el .upper() permite aceptar tanto "t" como "T" sin escribir dos condiciones. ¡Buena!
 if respuesta == "T" :
     base = float (input ("Ingresá la base: "))
     altura = float ("Ingresá la altura: ")
+    # ❌ Error GRAVE: te falta el input(). Tal como está, intentás convertir a float el string literal
+    #                "Ingresá la altura: ", lo que tira ValueError al ejecutar.
+    #                Debería ser:  altura = float(input("Ingresá la altura: "))
     area = (base * altura) / 2
     print (f"El área del triángulo es: {area}")
 elif respuesta == "C" :
@@ -223,6 +257,7 @@ elif respuesta == "C" :
     print (f"El área del circulo es {area}")
 else :
     print ("Opción no válida. Por favor, ingresá T o C.")
+# ✅ Bien hecho: el flujo y la cobertura de opciones inválidas está bien planteada.
 
 """
 8)Escriba un programa que pida tres números y diga si 
@@ -239,9 +274,55 @@ if dat2 > dat3 :
     distancia2 = dat2 - dat3
 else :
     distancia2 = dat3 - dat2
+# ✅ Bien hecho: muy buena resolución manual del valor absoluto con if/else. Funciona perfecto.
+# 💡 Sugerencia (más corta): la función abs() te da el valor absoluto y reemplaza el if/else:
+#                distancia1 = abs(dat1 - dat3)
+#                distancia2 = abs(dat2 - dat3)
 if distancia1 < distancia2 :
     print (f"Está más cerca del primero {dat1}")
 elif distancia2 < distancia1 :
     print (f"Está más cerca del segundo {dat2}")
 else :
     print ("Está a la misma distancia de ambos")
+# ✅ Bien hecho: ¡también contemplaste el caso "a la misma distancia"! Detalle que muchos olvidan.
+
+# =====================================================================
+#                       DEVOLUCIÓN FINAL — Milagros
+# =====================================================================
+#
+# ¡Felicitaciones, Mili! 🎉 Se nota muchísimo el trabajo y la dedicación
+# que pusiste a lo largo de las tres unidades. Llegaste a resolver
+# ejercicios complejos (ecuación de segundo grado, identificación del
+# tipo de dato, año bisiesto) con una lógica muy sólida. Avanzaste
+# sostenido desde lo más básico de la Unidad 2 hasta los bucles de la
+# Unidad 4, y eso es un montón de progreso.
+#
+# 🌟 PUNTOS FUERTES QUE NOTÉ
+#
+#   1. Manejo claro de condicionales anidados: la ecuación de segundo
+#      grado y el cálculo de la cursada/final están muy bien estructurados.
+#   2. Uso prolijo de f-strings y conversiones (int, float) para dar
+#      formato a los mensajes y procesar las entradas.
+#   3. Atención al detalle en casos que suelen olvidarse: división por
+#      cero, año bisiesto múltiplo de 400, "misma distancia" en el
+#      ejercicio de los tres números, validación de entrada con while.
+#
+# 🛠️ ÁREAS PARA SEGUIR TRABAJANDO
+#
+#   1. Releer las condiciones después de copiar/pegar bloques. El bug
+#      del Ejercicio 1 de U4 (`elif valor_usuario < valor_min` repetido)
+#      y el `float("Ingresá la altura: ")` sin input() del Ejercicio 7
+#      son ejemplos de cómo un repaso rápido al final permite cazar
+#      esos errores antes de entregar.
+#   2. Volver a leer la consigna antes de imprimir. En algunos
+#      ejercicios faltó mostrar el resultado pedido (ej. ejercicio 1
+#      de U2, o el promedio en el ejercicio 4 de U4). Una buena
+#      costumbre: subrayar los verbos de la consigna ("imprimir",
+#      "concatenar", "guardar en una variable") y revisar uno por uno.
+#
+# 💪 Seguí así, Mili: tu código es legible, ordenado y se nota que
+# pensás cada problema antes de tirar líneas. Los errorcitos que
+# aparecieron son típicos de cuando uno escribe rápido — con un poco
+# más de revisión final, vas a entregar trabajos impecables. ¡Éxitos
+# con las próximas unidades!  🚀
+# =====================================================================
