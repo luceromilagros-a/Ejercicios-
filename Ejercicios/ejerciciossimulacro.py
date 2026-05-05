@@ -230,3 +230,75 @@ print (es_primo(1))
 print (es_primo(4))
 print (es_primo(9))
 print (es_primo(0))
+
+"""
+EJERCICIO 6 — Conversor de Unidades con Módulo
+################################################
+
+Desarrollá un programa que convierta unidades de distancia y peso.
+
+El programa debe mostrar un menú al usuario y permitirle elegir qué conversión
+realizar. Debe seguir mostrando el menú hasta que el usuario elija salir.
+
+Menú:
+    1. Kilómetros a Millas
+    2. Kilogramos a Libras
+    3. Salir
+
+Fórmulas:
+    - 1 kilómetro = 0.621371 millas
+    - 1 kilogramo = 2.20462 libras
+
+Requisitos:
+- Las funciones de conversión deben estar en un módulo separado llamado `conversiones.py`.
+- Cada función debe tener un docstring de una línea que explique qué hace.
+  Ver formato: https://peps.python.org/pep-0257/#one-line-docstrings
+- El menú y la lógica principal deben estar en este archivo (ejercicio_06.py).
+- Si el usuario ingresa una opción inválida, mostrar "Opción no válida. Intente nuevamente."
+- Validar que el valor ingresado para convertir sea un número positivo.
+
+Ejemplo de ejecución:
+
+    ¿Qué desea convertir?
+    1. Kilómetros a Millas
+    2. Kilogramos a Libras
+    3. Salir
+    Ingrese una opción: 1
+    Ingrese los kilómetros: 10
+    10 km = 6.21 millas
+
+    Ingrese una opción: 2
+    Ingrese los kilogramos: 70
+    70 kg = 154.32 libras
+
+    Ingrese una opción: 3
+    ¡Hasta luego!
+
+Mostrá los resultados redondeados a 2 decimales (por ejemplo, `f"{valor:.2f}"`).
+
+"""
+import conversiones 
+def mostrar_menu() :
+    print("\n---Menú de Conversiones ---")
+    print ("1. Kilómetros a Millas")
+    print ("2.Kilogramos a Libras")
+    print ("3. Salir")
+while True :
+    mostrar_menu ()
+    opcion = input ("Ingrese una opción: ")
+    if opcion == "3" :
+        print ("¡Hasta luego!")
+        break
+    if opcion == "1" or opcion == "2" :
+        valor = float (input ("Ingrese la cantidad a convertir: "))
+        if valor < 0 :
+            print ("Error: El valor debe ser un número positivo.")
+            continue
+        if opcion == "1" :
+            resultado = conversiones.km_a_millas(valor)
+            print (f"{valor} km = {resultado:.2f} millas")
+        else :
+            resultado = conversiones.kg_a_libras(valor)
+            print (f"{valor} kg = {resultado:.2f} libras")
+    else :
+        print ("Opción no válida. Intente nuevamente.")
