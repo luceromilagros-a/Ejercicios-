@@ -4,6 +4,7 @@
 nombre = input ("Ingresá tu nombre: ")
 edad = input ("Ingresá tu edad: ")
 print (f"¡Hola, {nombre}! Tienes {edad} años")
+# ✅ Bien hecho: muy buen uso del f-string para armar el mensaje.
 
 
 # # # 2. Imprima en pantalla las siguientes figuras geometricas (utilizar concatenación y replicación de strings)
@@ -50,6 +51,9 @@ print ("##" + "  " * 18 + "##")
 print ("##" * 20)
 print ("##" * 20)
 print ("Esto es un 'ladrillo'")
+# ✅ Bien hecho: dominás la replicación y concatenación de strings. Las tres figuras quedan bien.
+# 💡 Sugerencia: el "ladrillo" usa "##"*20 (40 chars) y para el interior "##" + "  "*18 + "##" (40 chars).
+#                Las cuentas te dieron, ¡pero ojo cuando ancho/altura cambien!
 
 
 # # 3. Solicita al usuario que ingrese dos números enteros. 
@@ -61,6 +65,8 @@ n1 = float (int (nE1))
 n2 = float (int (nE2))
 division = n1 / n2
 print (f"El resultado de la división es: {division}")
+# 💡 Sugerencia: float(int(nE1)) es redundante; alcanza con float(nE1). El doble casteo no aporta nada.
+# 💡 Sugerencia: si n2 = 0 el programa rompe con ZeroDivisionError. Lo manejás bien más abajo (ej. 11).
 
 
 # # 4. Pide al usuario que ingrese una cadena que represente un número entero. 
@@ -70,6 +76,7 @@ print (f"El resultado de la división es: {division}")
 cadena = input ("Ingresá un número entero: ")
 numero = int (cadena) + 10
 print (f"El resultado de la suma es de: {numero}")
+# ✅ Bien hecho: conversión y suma resueltas correctamente.
 
 # # 5. Pregunta al usuario que ingrese un número. 
 # # Si el número es mayor que 10, imprime "El número es mayor que 10". 
@@ -83,6 +90,7 @@ elif numero == 10:
     print ("El número es igual a 10")
 else :
     print ("El número es menor que 10")
+# ✅ Bien hecho: el if/elif/else cubre los tres casos con la lógica correcta.
     
 # # 6. Solicita al usuario que ingrese dos números y compara si son iguales. 
 # # Si lo son, imprime "Los números son iguales". 
@@ -94,6 +102,9 @@ if n1 == n2:
     print ("Los números son iguales")
 else :
     print ("Los número son diferentes")
+# 💡 Sugerencia: estás comparando STRINGS. "5" == "5.0" daría False aunque sean el mismo número.
+#                Conviene convertirlos antes:  n1 = float(input(...))
+# 💡 Sugerencia: typo en el else → "Los número" debería ser "Los números".
 
 # # 7. Pregunta al usuario que ingrese su edad. 
 # # Si la edad es mayor o igual a 18, imprime "Eres mayor de edad". 
@@ -103,7 +114,8 @@ edad = int (input ("Ingresá tu edad: "))
 if edad >= 18 :
     print ("Eres mayor de edad")
 else :
-    print ("Eres menor de edad") 
+    print ("Eres menor de edad")
+# ✅ Bien hecho: simple y prolijo.
 
 # # 8. Pide al usuario que ingrese una temperatura en Celsius. 
 # # Si la temperatura es mayor o igual a 100, imprime "El agua está hirviendo". 
@@ -117,6 +129,7 @@ elif temperaturaC <= 0 :
     print ("El agua está congelada")
 else :
     print ("El agua está en estado líquido")
+# ✅ Bien hecho: usás float (necesario por las temperaturas decimales) y los rangos están bien planteados.
 
 # # 9. Pregunta al usuario que ingrese un número. 
 # # Si es positivo, imprime "El número es positivo". 
@@ -131,6 +144,7 @@ elif n < 0 :
     print ("El número es negativo")
 else :
     print ("El número es 0")
+# ✅ Bien hecho: los tres casos cubiertos correctamente.
 
 # # 10. Solicita al usuario que ingrese un número del 1 al 7. 
 # # Luego, imprime el día de la semana correspondiente (1 para Lunes, 2 para Martes, etc.). 
@@ -153,6 +167,10 @@ elif num == 7 :
     print ("DOMINGO")
 else :
     print ("Número de día no válido")
+# ✅ Bien hecho: la cadena de elif funciona bien y el caso "fuera de rango" está cubierto.
+# 💡 Sugerencia (avanzada): se podría resolver con una lista o diccionario:
+#     dias = ["LUNES","MARTES","MIÉRCOLES","JUEVES","VIERNES","SÁBADO","DOMINGO"]
+#     if 1 <= num <= 7: print(dias[num-1])  else: print("Número de día no válido")
 
 # # 11.Calculadora básica
 # # Crea un programa que tome dos números como entrada y 
@@ -168,6 +186,8 @@ if num2 != 0 :
     print (f"División: {num1 / num2}")
 else :
     print ("División: No es posible dividor por cero.")
+# ✅ Bien hecho: gran detalle el control de la división por cero. Eso te diferencia.
+# 💡 Sugerencia: typo en el mensaje → "dividor" debería ser "dividir".
 
 # # 12.Calculador de IMC
 # # Crea un programa que calcule el Índice de Masa Corporal (IMC) de una persona. 
@@ -189,6 +209,7 @@ elif 25 <= imc < 30 :
     print ("Calificación: Sobrepeso")
 else :
     print ("Calificación: Obesidad")
+# ✅ Bien hecho: muy buen uso de los rangos encadenados (18.5 <= imc < 25). Y el round(imc, 2) suma legibilidad.
 
 # 13.Conversión de unidades
 # Escribe un programa que convierta una temperatura dada en grados Celsius a grados Fahrenheit. 
@@ -198,6 +219,8 @@ else :
 temperaturaC = float (input ("Ingresá la tempratura en Celsius: "))
 Fahrenheit = (temperaturaC * 1.8) + 32
 print (f"La temperatura en Fahrenjeit es: {Fahrenheit}")
+# ✅ Bien hecho: la fórmula está bien (1.8 = 9/5).
+# 💡 Sugerencia: cuidado con los typos → "tempratura" → "temperatura"; "Fahrenjeit" → "Fahrenheit".
 
 # 14.Juego de adivinanza
 # Crea un programa que pida al usuario que adivine un número entre 1 y 10. 
@@ -215,16 +238,18 @@ else :
     print ("Incorrecto. El número secreto es menor.")
 
 
-secreto = 6 
+secreto = 6
 intento = 0
 while intento != secreto:
     intento = int(input("Adiviná el número secreto entre 1 y 10: "))
-    if intento == secreto:  
+    if intento == secreto:
         print("¡Felicidades! ADIVINASTE EL NÚMERO.")
     elif intento < secreto:
         print("INCORRECTO. El número secreto es mayor")
     else:
         print("INCORRECTO. El número secreto es menor")
+# ✅ Bien hecho: ¡plus! Hiciste una segunda versión del juego con un while que permite seguir intentando.
+#                Esto ya está pisando temas de Unidad 4 (bucles), buen anticipo.
 
 # 15.Identificación del tipo de dato
 
@@ -265,6 +290,10 @@ elif dato.isdigit():
     print("El dato dato representa un número entero")
 else:
     print("El número representa una cadena de texto")
+# ✅ Bien hecho: ejercicio difícil resuelto con sólido manejo de strings (replace, startswith, isdigit, indexación).
+# 💡 Sugerencia: hay un typo "El dato dato representa..." (palabra "dato" repetida).
+# 💡 Sugerencia: en el último else convendría decir "El dato representa..." (no "El número") porque
+#                justamente ahí ya determinaste que NO es número.
 
 # 16.Calculador de calificaciones
 # Crea un programa que pida al usuario que ingrese sus calificaciones en tres materias. 
@@ -279,6 +308,8 @@ if promedio >= 6 :
     print ("APROBASTE")
 else :
     print ("Desaprobado")
+# ✅ Bien hecho: cálculo de promedio y comparación correctos.
+# 💡 Sugerencia: estaría bueno mostrar el promedio antes del veredicto (print(f"Promedio: {promedio}")).
 
 # 17.Concatenación de strings
 # Escribe un programa que pida al usuario su nombre y su color favorito. 
@@ -288,3 +319,5 @@ else :
 nombre = input ("Ingresá tu nombre: ")
 color = input ("Insgresá tu color favorito: ")
 print (f"Hola {nombre}!, tu color favorito es {color}")
+# ✅ Bien hecho: f-string limpio y prolijo.
+# 💡 Sugerencia: typo → "Insgresá" debería ser "Ingresá".
