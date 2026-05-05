@@ -52,3 +52,42 @@ def validar_contrasena(contrasena) :
 print(validar_contrasena("Hola1234"))      
 print(validar_contrasena("hola1234"))      
 print(validar_contrasena("HOLA 123"))
+
+"""
+EJERCICIO 2 — Combinar Dos Listas
+##################################
+
+Escribí una función llamada `combinar_listas(lista1, lista2)` que reciba dos listas
+como parámetros y devuelva una nueva lista con todos los elementos de ambas,
+primero los de `lista1` y luego los de `lista2`.
+
+Importante: no uses el operador `+` entre listas ni el método `.extend()`.
+Debés recorrer cada lista con un bucle y construir la nueva lista elemento por elemento.
+
+Luego llamá a la función con los siguientes ejemplos e imprimí los resultados:
+
+    lista_a = [1, 2, 3]
+    lista_b = [4, 5, 6]
+    # Resultado esperado: [1, 2, 3, 4, 5, 6]
+
+    lista_c = ["manzana", "pera"]
+    lista_d = ["naranja", "uva", "durazno"]
+    # Resultado esperado: ["manzana", "pera", "naranja", "uva", "durazno"]
+
+"""
+def combinar_listas(lista1,lista2) :
+    lista_combinada = []
+    for elemento in lista1 :
+        lista_combinada.append(elemento)
+    for elemento in lista2 :
+        lista_combinada.append(elemento)
+    return lista_combinada 
+lista_a = [1, 2, 3]
+lista_b = [4, 5, 6]
+resultado1 = combinar_listas(lista_a, lista_b)
+print (f"Resultado 1: {resultado1}")
+
+lista_c = ["manzana", "pera"]
+lista_d = ["naranja", "uva", "durazno"]
+resultado2 = combinar_listas(lista_c, lista_d)
+print (f"Resultado 2: {resultado2}")
